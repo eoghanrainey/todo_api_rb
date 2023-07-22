@@ -5,6 +5,8 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
+
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,4 +20,13 @@ public class ToDo {
 
     @Column(nullable = false)
     private boolean deleted;
+
+    @Column(nullable = false)
+    private LocalDate dateCreated;
+
+    @Column
+    private LocalDate dateToComplete;
+
+
+
 }
