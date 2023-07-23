@@ -2,20 +2,27 @@ package example.rabobank.toDo.service;
 
 import example.rabobank.toDo.entity.ToDo;
 
+import java.time.LocalDate;
 import java.util.List;
 
 public interface ToDoService {
 
-        ToDo createToDoEntry(String description);
-        ToDo updateToDoEntry(Long id, String description, boolean completed, boolean deleted);
-        ToDo markToDoEntryAsCompleted(Long id);
-        ToDo markToDoEntryAsDeleted(Long id);
-        void deleteToDoEntry(Long id);
-        List<ToDo> getAllToDoEntries();
-        List<ToDo> getCompletedToDoEntries();
-        List<ToDo> getDeletedToDoEntries();
-        List<ToDo> getToDoEntriesByCreatedDate();
-        List<ToDo> getToDoEntriesByToCompleteByDate();
+    ToDo create(ToDo todo);
 
-    }
+    ToDo update(Long id, ToDo todo);
+
+    void delete(Long id);
+
+    ToDo getById(Long id);
+
+    List<ToDo> getAll();
+
+    List<ToDo> getByCompleted(boolean completed);
+
+    List<ToDo> getByDeleted(boolean completed);
+
+    List<ToDo> getByCreatedDate(LocalDate createdDate);
+}
+
+
 

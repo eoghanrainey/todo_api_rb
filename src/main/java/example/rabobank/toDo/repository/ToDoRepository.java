@@ -7,11 +7,13 @@ import org.springframework.stereotype.Repository;
 import java.time.LocalDate;
 import java.util.List;
 
-public class ToDoRepository {
-    @Repository
-    public interface TodoItemRepository extends JpaRepository<ToDo, Long> {
-        List<ToDo> findByCompleted(boolean completed);
-        List<ToDo> findByDeleted(boolean deleted);
-        List<ToDo> findByCreatedDate(LocalDate dateCreated);
-    }
+
+@Repository
+public interface ToDoRepository extends JpaRepository<ToDo, Long> {
+    List<ToDo> findByCompleted(boolean completed);
+
+    List<ToDo> findByDeleted(boolean deleted);
+
+    List<ToDo> findByDateCreated(LocalDate date);
 }
+
