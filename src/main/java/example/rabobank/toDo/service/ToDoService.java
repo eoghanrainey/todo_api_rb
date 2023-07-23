@@ -17,9 +17,9 @@ public interface ToDoService {
 
     List<ToDo> getAll();
 
-    List<ToDo> getByCompleted(boolean completed);
+    List<ToDo> getByCompleted();
 
-    List<ToDo> getByDeleted(boolean completed);
+    List<ToDo> getByDeleted();
 
     List<ToDo> getByCreatedDate(LocalDate createdDate);
 }

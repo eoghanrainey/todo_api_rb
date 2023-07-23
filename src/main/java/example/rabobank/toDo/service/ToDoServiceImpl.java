@@ -60,12 +60,12 @@ public class ToDoServiceImpl implements ToDoService {
     }
 
     @Override
-    public List<ToDo> getByCompleted(boolean completed) {
-        return toDoRepository.findByCompleted(completed);
+    public List<ToDo> getByCompleted() {
+        return toDoRepository.findByCompleted(true);
     }
 
     @Override
-    public List<ToDo> getByDeleted(boolean deleted) {
-        return toDoRepository.findByDeleted(deleted);
+    public List<ToDo> getByDeleted() {
+        return toDoRepository.findByDeleted(true);
     }
 }
