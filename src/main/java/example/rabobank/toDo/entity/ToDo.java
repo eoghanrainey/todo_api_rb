@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Table(name = "TODO")
 public class ToDo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
