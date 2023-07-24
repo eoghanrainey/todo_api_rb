@@ -4,6 +4,19 @@ This application is a simple ToDo list management system. It allows users to cre
 items. The application uses a REST API to allow clients to interact with the system. The API is implemented using Spring
 Boot and Hibernate.
 
+## How to run the application:
+
+Please ensure you have Java, Docker Desktop and Maven installed on your local machine.
+
+### To run the application, follow these steps:
+
+- Clone the repository to your local machine.
+- Open a terminal window in the root directory of the project.
+- Run the command ./mvnw clean package to build the application.
+- Run the command docker-compose up to run the application and database via a docker container
+- Open a web browser and go to http://localhost:8081/swagger-ui/index.html# to access the Swagger documentation and test
+  the API endpoints.
+
 ## Functionalities:
 
 - Get all ToDo items: The API endpoint /todos returns all the ToDo items present in the system.
@@ -35,15 +48,3 @@ endpoints. To access the Swagger documentation, go to http://localhost:8080/swag
 - Mockito/Junit for Testing
 - Maven for build automation and dependencies.
 
-## How to run the application:
-
-Please ensure you have Java, Docker Desktop and Maven installed on your local machine.
-
-### To run the application, follow these steps:
-
-- Clone the repository to your local machine.
-- Open a terminal window in the root directory of the project.
-- Run the command ./mvnw clean package to build the application.
-- Run the command docker-compose up to run the application and database via a docker container
-- Open a web browser and go to http://localhost:8081/swagger-ui/index.html# to access the Swagger documentation and test
-  the API endpoints.
