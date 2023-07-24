@@ -12,7 +12,7 @@ Please ensure you have Java, Docker Desktop and Maven installed on your local ma
 
 - Clone the repository to your local machine.
 - Open a terminal window in the root directory of the project.
-- Run the command ./mvnw clean package to build the application.
+- Run the command mvn clean package to build the application.
 - Run the command docker-compose up to run the application and database via a docker container
 - Open a web browser and go to http://localhost:8081/swagger-ui/index.html# to access the Swagger documentation and test
   the API endpoints.
