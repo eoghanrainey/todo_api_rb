@@ -4,7 +4,6 @@ import example.rabobank.toDo.entity.ToDo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.time.LocalDate;
 import java.util.List;
 
 
@@ -14,6 +13,5 @@ public interface ToDoRepository extends JpaRepository<ToDo, Long> {
 
     List<ToDo> findByDeleted(boolean deleted);
 
-    List<ToDo> findByDateCreated(LocalDate date);
 }
 

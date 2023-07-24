@@ -12,7 +12,6 @@ import org.mockito.MockitoAnnotations;
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
 class ToDoServiceImplTests {
@@ -43,8 +42,8 @@ class ToDoServiceImplTests {
         ToDo createdToDo = toDoService.create(todo);
         assertNotNull(createdToDo);
         assertEquals(todo.getDescription(), createdToDo.getDescription());
-        assertFalse(createdToDo.isCompleted());
-        assertFalse(createdToDo.isDeleted());
+        assertFalse(createdToDo.getCompleted());
+        assertFalse(createdToDo.getDeleted());
         assertNotNull(createdToDo.getDateCreated());
         verify(toDoRepository, times(1)).save(any(ToDo.class));
     }

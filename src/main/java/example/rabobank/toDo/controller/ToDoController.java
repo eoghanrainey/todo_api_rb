@@ -19,7 +19,6 @@ public class ToDoController {
     public ToDoController(ToDoService toDoService) {
         this.toDoService = toDoService;
     }
-
     @GetMapping
     public ResponseEntity<List<ToDo>> getAll() {
         return ResponseEntity.ok(toDoService.getAll());
@@ -29,7 +28,6 @@ public class ToDoController {
     public ResponseEntity<ToDo> create(@RequestBody ToDo todo) {
         return ResponseEntity.status(HttpStatus.CREATED).body(toDoService.create(todo));
     }
-
     @GetMapping("/completed")
     public ResponseEntity<List<ToDo>> getCompleted() {
         return ResponseEntity.ok(toDoService.getByCompleted());

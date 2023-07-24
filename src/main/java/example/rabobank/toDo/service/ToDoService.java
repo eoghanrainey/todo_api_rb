@@ -2,7 +2,6 @@ package example.rabobank.toDo.service;
 
 import example.rabobank.toDo.entity.ToDo;
 
-import java.time.LocalDate;
 import java.util.List;
 
 public interface ToDoService {
@@ -21,7 +20,6 @@ public interface ToDoService {
 
     List<ToDo> getByDeleted();
 
-    List<ToDo> getByCreatedDate(LocalDate createdDate);
 }
 
 
