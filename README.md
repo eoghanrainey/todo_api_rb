@@ -34,7 +34,7 @@ Please ensure you have Java, Docker Desktop and Maven installed on your local ma
   Swagger:
 
 The application uses Swagger to document the API endpoints and to provide a graphical interface for testing the
-endpoints. To access the Swagger documentation, go to http://localhost:8080/swagger-ui/ in your web browser.
+endpoints. To access the Swagger documentation, go to http://localhost:8081/swagger-ui/index.html in your web browser.
 
 ## Technologies:
 
