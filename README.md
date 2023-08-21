@@ -42,7 +42,7 @@ endpoints. To access the Swagger documentation, go to http://localhost:8081/swag
 
 - Spring Boot: A framework for building Java applications.
 - Hibernate: An ORM (Object-Relational Mapping) library that simplifies database access.
-- JDBC/Postgres Database: A lightweight in-memory database used for development and testing.
+- Postgres Database: A lightweight in-memory database used for development and testing.
 - Swagger: A tool for documenting and testing REST APIs.
 - Docker - For serving the application and database for quick access.
 - Mockito/Junit for Testing
